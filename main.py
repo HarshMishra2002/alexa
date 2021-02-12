@@ -1,3 +1,4 @@
+# Importing necessary packages
 import speech_recognition as sr
 import webbrowser
 import pyaudio
@@ -5,16 +6,19 @@ import pyttsx3
 import time
 import random
 
+# Initializing python text to speech and setting it's voice
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
 
+# Creating speak function 
 def speak(text):
     engine.say(text)
     engine.runAndWait()
 
 
+# This is the initial words from our alexa...
 initial_text = "Hello Harsh, I am your alexa. How can i help you"
 speak(initial_text)
 
